@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+  .landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    background: white;
+  }
+
+/* Header logo tulisan + Card container */
+  .title-logo {
+    position: absolute;
+    top: 1rem;
+    transform: translateX(-50%);
+    height: 70px;
+    background: #fff;
+    z-index: 2;
+  }
+
+  .card-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100rem;
+    height: 40rem;
+    padding: 3rem;
+
+    /* border: 1px solid pink; */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6);
+
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  /* Logo awal */
+  .logo-card {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  /* Foto grup */
+  .group-card {
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid pink; */
+    border-radius: 12px;
+    object-fit: cover;
+    animation: popIn 0.5s ease forwards;
+  }
+
+  /* Animasi */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+
+
+/* Running text */
+.running-text {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  margin: 8rem;
+}
+
+.running-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 60s linear infinite;
+}
+
+.running-icon {
+  height: 80px;
+  margin: 0 5rem;
+  vertical-align: middle;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+
+/* Member Cards */
+.article-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.member-card {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Kontainer dalam: lebar 200% = foto 50% + bio 50% */
+.member-inner {
+  display: flex;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+}
+
+.member-photo,
+.member-bio {
+  flex: 1 0 50%;
+}
+
+.member-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bio hidden dulu */
+.member-bio {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  font-size: clamp(12px, 1.5vw, 18px);
+  line-height: 1.8;
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: flex-start; 
+  text-align: left;
+  padding: 0 2rem;
+  max-width: 100%;
+}
+
+.member-bio strong {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Saat open → geser kontainer + munculin bio */
+.member-card.open .member-inner {
+  transform: translateX(-50%);
+}
+
+
+.member-card.open .member-bio {
+  opacity: 1;
+}

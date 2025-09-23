@@ -1,0 +1,82 @@
+[ 
+    { 
+        "group": "HEARTS2HEARTS",
+        "stageName": "Carmen",
+        "realName": "Nyoman Ayu Carmenita",
+        "age": 19,
+        "birthday": "28 Maret 2006",
+        "position": "Main Vocalist",
+        "nationality": "Indonesia",
+        "image": "src/assets/img/9.png"
+    },
+    {
+        "group": "HEARTS2HEARTS",
+        "stageName": "Jiwoo",
+        "realName": "Choi Jiwoo (최지우)",
+        "age": 18,
+        "birthday": "7 September 2006",
+        "position": "Leader, Dancer, Rapper, Visual",
+        "nationality": "Korea Selatan",
+        "image": "src/assets/img/10.png"
+    },
+    {
+        "group": "HEARTS2HEARTS",
+        "stageName": "Yuha",
+        "realName": "Yu Ha-ram (유하람)",
+        "age": 18, 
+        "birthday": "12 April 2007",
+        "position": "Vocalist, Dancer",
+        "nationality": "Korea Selatan",
+        "image": "src/assets/img/11.png"
+    },
+    {
+        "group": "HEARTS2HEARTS",
+        "stageName": "Stella",
+        "realName": "Kim Da-hyun (김다현)",
+        "age": 18, 
+        "birthday": "18 Juni 2007",
+        "position": "Vocalist",
+        "nationality": "Korea Selatan",
+        "image": "src/assets/img/12.png"
+    },
+    {
+        "group": "HEARTS2HEARTS",
+        "stageName": "Juun",
+        "realName": "Kim Ju-eun (김주은)",
+        "age": 16, 
+        "birthday": "3 Desember 2008",
+        "position": "Main Dancer, Rapper",
+        "nationality": "Korea Selatan",
+        "image": "src/assets/img/13.png"
+    },
+    {
+        "group": "HEARTS2HEARTS",
+        "stageName": "A-na",
+        "realName": "Roh Yu-na (노유나)",
+        "age": 16,
+        "birthday": "20 Desember 2008",
+        "position": "Lead Vocalist, Visual",
+        "nationality": "Korea Selatan",
+        "image": "src/assets/img/14.png"
+    },
+    {
+        "group": "HEARTS2HEARTS",
+        "stageName": "Ian",
+        "realName": "Jeong Lee-an (정이안)",
+        "age": 15,
+        "birthday": "9 Oktober 2009",
+        "position": "Dancer, Vocalist, Center, Visual",
+        "nationality": "Korea Selatan",
+        "image": "src/assets/img/15.png"
+    },
+    {
+        "group": "HEARTS2HEARTS",
+        "stageName": "Ye-on",
+        "realName": "Kim Na-yeon (김나연)",
+        "age": 15,
+        "birthday": "19 April 2010",
+        "position": "Vocalist, Maknae",
+        "nationality": "Korea Selatan",
+        "image": "src/assets/img/16.png"
+    }
+]
