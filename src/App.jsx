@@ -1,6 +1,17 @@
 import { useState } from "react";
 import "./App.css";
 import members from "./assets/idols.json";
+import logoTitle from "./assets/img/18.png";
+import logoCard from "./assets/img/17.png";
+import groupPhoto from "./assets/img/0.jpeg";
+import mini1 from "./assets/img/1.png";
+import mini2 from "./assets/img/2.png";
+import mini3 from "./assets/img/3.png";
+import mini4 from "./assets/img/4.png";
+import mini5 from "./assets/img/5.png";
+import mini6 from "./assets/img/6.png";
+import mini7 from "./assets/img/7.png";
+import mini8 from "./assets/img/8.png";
 
 function App() {
   const [showGroup, setShowGroup] = useState(false);
@@ -8,33 +19,18 @@ function App() {
 
   return (
     <div className="landing">
-      {/* Header logo tulisan */}
+      {/* Header */}
       <header className="header">
-        <img
-          src="src/assets/img/18.png"
-          alt="hearts2hearts"
-          className="title-logo"
-        />
+        <img src={logoTitle} alt="hearts2hearts" className="title-logo" />
       </header>
 
       {/* Card container */}
-      <div
-        className="card-container"
-        onClick={() => setShowGroup(!showGroup)}
-      >
-        {!showGroup ? (
-          <img
-            src="src/assets/img/17.png"
-            alt="Logo Group"
-            className="logo-card"
-          />
-        ) : (
-          <img
-            src="src/assets/img/0.jpeg"
-            alt="Foto Grup"
-            className="group-card"
-          />
-        )}
+      <div className="card-container" onClick={() => setShowGroup(!showGroup)}>
+        <img
+          src={showGroup ? groupPhoto : logoCard}
+          alt="Group"
+          className={showGroup ? "group-card" : "logo-card"}
+        />
       </div>
 
       {/* Running Text */}
@@ -42,29 +38,29 @@ function App() {
         <div className="running-track">
           {[...Array(2)].map((_, i) => (
             <span key={i}>
-              <img src="src/assets/img/1.png" alt="mini1" className="running-icon" />
-              <img src="src/assets/img/2.png" alt="mini2" className="running-icon" />
-              <img src="src/assets/img/3.png" alt="mini3" className="running-icon" />
-              <img src="src/assets/img/4.png" alt="mini4" className="running-icon" />
-              <img src="src/assets/img/5.png" alt="mini5" className="running-icon" />
-              <img src="src/assets/img/6.png" alt="mini6" className="running-icon" />
-              <img src="src/assets/img/7.png" alt="mini7" className="running-icon" />
-              <img src="src/assets/img/8.png" alt="mini8" className="running-icon" />
+              {[mini1, mini2, mini3, mini4, mini5, mini6, mini7, mini8].map(
+                (icon, index) => (
+                  <img
+                    key={index}
+                    src={icon}
+                    alt={`mini${index + 1}`}
+                    className="running-icon"
+                  />
+                )
+              )}
             </span>
           ))}
         </div>
       </div>
 
-      {/* Member Cards props */}
+      {/* Member Cards */}
       <section className="article-section">
         {members.map((member, index) => (
           <MemberCard
             key={index}
-            member={member}                      // props data
-            isOpen={openCard === index}          // props status
-            onClick={() =>
-              setOpenCard(openCard === index ? null : index)
-            }                                   // props function
+            member={member}
+            isOpen={openCard === index}
+            onClick={() => setOpenCard(openCard === index ? null : index)}
           />
         ))}
       </section>
@@ -74,10 +70,7 @@ function App() {
 
 function MemberCard({ member, isOpen, onClick }) {
   return (
-    <div
-      className={`member-card ${isOpen ? "open" : ""}`}
-      onClick={onClick}
-    >
+    <div className={`member-card ${isOpen ? "open" : ""}`} onClick={onClick}>
       <div className="member-inner">
         <div className="member-photo">
           <img src={member.image} alt={member.stageName} />
