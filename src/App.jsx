@@ -73,7 +73,10 @@ function MemberCard({ member, isOpen, onClick }) {
     <div className={`member-card ${isOpen ? "open" : ""}`} onClick={onClick}>
       <div className="member-inner">
         <div className="member-photo">
-          <img src={member.image} alt={member.stageName} />
+        <img
+          src={new URL(`./assets/img/${member.image}`, import.meta.url).href}
+          alt={member.stageName}
+        />
         </div>
         <div className="member-bio">
           <h2>{member.stageName}</h2>
