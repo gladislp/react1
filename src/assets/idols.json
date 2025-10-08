@@ -7,7 +7,7 @@
         "birthday": "28 Maret 2006",
         "position": "Main Vocalist",
         "nationality": "Indonesia",
-        "image": "src/assets/img/9.png"
+        "image": "9.png"
     },
     {
         "group": "HEARTS2HEARTS",
@@ -17,7 +17,7 @@
         "birthday": "7 September 2006",
         "position": "Leader, Dancer, Rapper, Visual",
         "nationality": "Korea Selatan",
-        "image": "src/assets/img/10.png"
+        "image": "10.png"
     },
     {
         "group": "HEARTS2HEARTS",
@@ -27,7 +27,7 @@
         "birthday": "12 April 2007",
         "position": "Vocalist, Dancer",
         "nationality": "Korea Selatan",
-        "image": "src/assets/img/11.png"
+        "image": "11.png"
     },
     {
         "group": "HEARTS2HEARTS",
@@ -37,7 +37,7 @@
         "birthday": "18 Juni 2007",
         "position": "Vocalist",
         "nationality": "Korea Selatan",
-        "image": "src/assets/img/12.png"
+        "image": "12.png"
     },
     {
         "group": "HEARTS2HEARTS",
@@ -47,7 +47,7 @@
         "birthday": "3 Desember 2008",
         "position": "Main Dancer, Rapper",
         "nationality": "Korea Selatan",
-        "image": "src/assets/img/13.png"
+        "image": "13.png"
     },
     {
         "group": "HEARTS2HEARTS",
@@ -57,7 +57,7 @@
         "birthday": "20 Desember 2008",
         "position": "Lead Vocalist, Visual",
         "nationality": "Korea Selatan",
-        "image": "src/assets/img/14.png"
+        "image": "14.png"
     },
     {
         "group": "HEARTS2HEARTS",
@@ -67,7 +67,7 @@
         "birthday": "9 Oktober 2009",
         "position": "Dancer, Vocalist, Center, Visual",
         "nationality": "Korea Selatan",
-        "image": "src/assets/img/15.png"
+        "image": "15.png"
     },
     {
         "group": "HEARTS2HEARTS",
@@ -77,6 +77,6 @@
         "birthday": "19 April 2010",
         "position": "Vocalist, Maknae",
         "nationality": "Korea Selatan",
-        "image": "src/assets/img/16.png"
+        "image": "16.png"
     }
 ]
