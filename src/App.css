@@ -6,81 +6,81 @@
   font-family: 'Poppins', sans-serif;
 }
 
-  .landing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 4rem;
-    background: white;
-  }
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem;
+  background: white;
+}
 
-/* Header logo tulisan + Card container */
-  .title-logo {
-    position: absolute;
-    top: 1rem;
-    transform: translateX(-50%);
-    height: 70px;
-    background: #fff;
-    z-index: 2;
-  }
+/* Header logo tulisan */
+.title-logo {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px; /* ukuran maksimal desktop */
+  width: 25%;       /* responsive */
+  height: auto;     /* pertahankan rasio */
+  z-index: 2;
+}
 
-  .card-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Card container dengan aspect ratio tetap */
+.card-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 100rem;
-    height: 40rem;
-    padding: 3rem;
+  width: 100%;
+  max-width: 100rem;      /* ukuran desktop */
+  aspect-ratio: 100 / 40; /* rasio 100rem:40rem tetap sama */
 
-    /* border: 1px solid pink; */
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6);
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-    background: #fff;
-    overflow: hidden;
-    cursor: pointer;
-  }
+/* Logo awal */
+.logo-card {
+  max-width: 60%; /* maksimal 60% container */
+  width: 30%;     /* responsive */
+  height: auto;   /* pertahankan rasio */
+  object-fit: contain;
+  animation: fadeIn 0.5s ease forwards;
+}
 
-  /* Logo awal */
-  .logo-card {
-    width: 60%;
-    height: 60%;
-    object-fit: contain;
-    animation: fadeIn 0.5s ease forwards;
-  }
+/* Foto grup */
+.group-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* isi container, tetap pertahankan rasio visual */
+  border-radius: 12px;
+  animation: popIn 0.5s ease forwards;
+}
 
-  /* Foto grup */
-  .group-card {
-    width: 100%;
-    height: 100%;
-    /* border: 2px solid pink; */
-    border-radius: 12px;
-    object-fit: cover;
-    animation: popIn 0.5s ease forwards;
-  }
+/* Animasi */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
 
-  /* Animasi */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to   { opacity: 1; transform: scale(1); }
-  }
-
-  @keyframes popIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to   { opacity: 1; transform: scale(1); }
-  }
-
-
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
 
 /* Running text */
 .running-text {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
-  margin: 8rem;
+  margin: 8rem 0;
 }
 
 .running-track {
@@ -99,7 +99,6 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
-
 
 /* Member Cards */
 .article-section {
@@ -129,7 +128,7 @@
 
 .member-photo img {
   width: 100%;
-  height: auto;
+  height: auto; /* pertahankan rasio */
   display: block;
 }
 
@@ -159,7 +158,48 @@
   transform: translateX(-50%);
 }
 
-
 .member-card.open .member-bio {
   opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .card-container {
+    padding: 2rem;
+  }
+  .logo-card {
+    max-width: 70%;
+  }
+  .title-logo {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    margin: 2rem;
+  }
+  .card-container {
+    padding: 1.5rem;
+  }
+  .logo-card {
+    max-width: 80%;
+  }
+  .title-logo {
+    max-width: 180px;
+  }
+  .running-text {
+    margin: 4rem 0;
+  }
+  .running-icon {
+    height: 50px;
+    margin: 0 2rem;
+  }
+  .article-section {
+    grid-template-columns: 1fr;
+  }
+  .member-bio {
+    font-size: clamp(10px, 2.5vw, 16px);
+    padding: 1rem;
+  }
 }
